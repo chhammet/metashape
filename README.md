@@ -20,6 +20,12 @@ The script will run in the command line. An example command will look something 
 ```
 python python/metashape_workflow.py config/config.yml
 ```
+When processing on a shared server, run your code using taskset -c <cpu_start>-<cpu_end>. Like:
+```
+taskset -c 30-50 python python/metashape_workflow.py your_config.yml
+````
+This isolate your script to just cpu numbers 30-50
+
 The python script and the config file is in the repo. 
 
 ### Organizing Image Folders
